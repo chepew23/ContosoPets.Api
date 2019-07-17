@@ -28,7 +28,7 @@ namespace ContosoPets.Api.Controllers
         {
             var product = await this._context.Products.FindAsync(Id);
 
-            if (!product)
+            if (product == null)
             {
                 return NotFound();
             }
@@ -40,9 +40,9 @@ namespace ContosoPets.Api.Controllers
         public async Task<ActionResult<Product>> Create(Product product)
         {
             this._context.Add(product);
-            this._context.SaveChangeAsync();
+            await this._context.SaveChangesAsync();
 
-            return CreatedAction(nameof(GetById), new { id = product.Id }, product);
+            return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
         }
 
         [HttpPut("{id}")]

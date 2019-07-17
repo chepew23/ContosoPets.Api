@@ -1,4 +1,4 @@
-using Microsoft.EntityFramework;
+using Microsoft.EntityFrameworkCore;
 using ContosoPets.Api.Models;
 
 namespace ContosoPets.Api.Data
@@ -7,7 +7,7 @@ namespace ContosoPets.Api.Data
     {
         public DbSet<Product> Products { get; set; }
 
-        public ContosoPetsContex(DbContextOptions<ContosoPetsContext> options)
+        public ContosoPetsContext(DbContextOptions<ContosoPetsContext> options)
             : base (options)
         {
 
