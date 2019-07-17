@@ -26,7 +26,8 @@ namespace ContosoPets.Api
         public void ConfigureServices(IServiceCollection services)
         {
             // Configure In Memory Database
-            services.AddDbContext<ContosoPetsContext>(options => options.UseInMemoryDatabase("ContosoPets"));
+            services.AddDbContext<ContosoPetsContext>(options =>
+                options.UseInMemoryDatabase("ContosoPets"));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

@@ -41,3 +41,4 @@ info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
       Executed endpoint 'ContosoPets.Api.Controllers.ValuesController.Get (ContosoPets.Api)'
 info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
       Request finished in 0.813ms 200 application/json; charset=utf-8
+Application is shutting down...
